@@ -1,0 +1,24 @@
+<%- include("./header.ejs") %>
+
+<form action="/members/create" method="POST" class="create-form">
+  <label for="name" class="hidden">Namn:</label>
+  <input type="text" name="name" id="name" placeholder="Namn" />
+  <br />
+  <label for="email" class="hidden">Email:</label>
+  <input type="email" name="email" id="email" placeholder="Epostadress" />
+  <br />
+  <label for="phone" class="hidden">Telefonnummer:</label>
+  <input type="number" name="phone" id="phone" placeholder="Telefonnummer" />
+  <br />
+  <label for="description" class="hidden">Spel som jag gillar:</label>
+  <input
+    type="text"
+    name="description"
+    id="description"
+    placeholder="Spel jag gillar:"
+  />
+  <br />
+  <button>Save</button>
+</form>
+
+<%- include("./footer.ejs") %>

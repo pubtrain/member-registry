@@ -1,0 +1,23 @@
+<%- include("./header.ejs") %>
+
+<button onclick="location.href='/details/<%=_id%>/delete' ">
+  Ta bort medlem
+</button>
+<h2>Användardetalj</h2>
+<h3>Namn: <%= name %></h3>
+<p>Epost: <%= email %></p>
+<p>Telefonnummer: <%= phone %></p>
+<p>Jag blev medlem: <%= createdAt %></p>
+<p>Spel som jag gillar: <%= description %></p>
+
+<form action="/details/update/<%=_id%>" method="POST">
+  <input type="text" name="name" value="<%= name %>" />
+  <br />
+  <input type="text" name="phone" value="<%= phone %>" /> <br />
+  <input type="text" name="email" value="<%= email %>" /> <br />
+  <input type="text" name="description" value="<%= description %>" />
+  <br />
+  <input type="submit" value="Ändra uppgifter" />
+</form>
+
+<%- include("./footer.ejs") %>

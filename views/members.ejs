@@ -1,0 +1,19 @@
+<%- include("./header.ejs") %>
+
+<select onchange="location=this.value" name="sort" id="sort">
+  <option value="null" selected disabled>Sortera på:</option>
+  <option value="/members/sort/1">Från A till Ö:</option>
+  <option value="/members/sort/2">Från Ö till A:</option>
+  <option value="/members">Kontot skapades:</option>
+</select>
+
+<div class="memberCollection">
+  <% members.forEach((details) => { %>
+  <p>
+    <%= details.name%>%>
+    <a href="/details/<%= details._id %>">Visa detaljer</a>
+  </p>
+  <% }); %>
+</div>
+
+<%- include("./footer.ejs") %>
